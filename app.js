@@ -1,10 +1,10 @@
-const rectangle = require("./rectangle");
-const rect = require("./rectangle");
+// const rectangle = require("./rectangle").default;
+import getRectangle from "./rectangle.js";
 
 function solveRect(l, w) {
   console.log(`Solving for rectangle with dimensions: ${l}, ${w}`);
 
-  rect(l, w, (err, rectangle) => {
+  getRectangle(l, w, (err, rectangle) => {
     if (err) {
       console.log("ERROR:", err.message);
     } else {
